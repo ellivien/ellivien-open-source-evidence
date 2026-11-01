@@ -40,9 +40,11 @@ function snapshotUrl(path) {
   return `https://github.com/${OWNER}/${EVIDENCE_REPOSITORY}/blob/main/docs/${path}`;
 }
 
-function renderCard(repository, capturedAt, snapshotPath, index) {
+function renderCard(repository, recorded, capturedAt, snapshotPath, index) {
   const views = repository.traffic?.views || {};
   const clones = repository.traffic?.clones || {};
+  const recordedFrom = recorded?.recordedViewsFrom || recorded?.recordedClonesFrom;
+  const recordedSince = recordedFrom ? `since ${shortDate(recordedFrom)}` : 'since tracking began';
   return `
     <article class="repo-card" style="--accent: ${ACCENTS[index % ACCENTS.length]}">
       <div class="repo-card__top">
@@ -53,11 +55,11 @@ function renderCard(repository, capturedAt, snapshotPath, index) {
         <a class="repo-card__link" href="${repository.url}" target="_blank" rel="noreferrer">Repository ↗</a>
       </div>
       <div class="metrics">
-        ${metric('views · rolling 14 days', views.count)}
-        ${metric('unique visitors · 14 days', views.uniques)}
-        ${metric('full clones · 14 days', clones.count)}
-        ${metric('unique cloning clients', clones.uniques)}
-        ${metric('named release ZIP downloads', repository.releasePackageDownloadTotal, true)}
+        ${metric(`recorded views · ${recordedSince}`, recorded?.recordedViews ?? views.count)}
+        ${metric('unique visitors · latest 14 days', views.uniques)}
+        ${metric(`recorded full clones · ${recordedSince}`, recorded?.recordedClones ?? clones.count)}
+        ${metric('unique cloning clients · latest 14 days', clones.uniques)}
+        ${metric('named release ZIP downloads · cumulative', repository.releasePackageDownloadTotal, true)}
       </div>
       <div class="repo-card__foot">
         <a class="repo-card__link" href="${snapshotUrl(snapshotPath)}" target="_blank" rel="noreferrer">Exact snapshot ↗</a>
@@ -81,6 +83,8 @@ function renderHistory(index) {
     <td>${number(row.uniqueVisitors)}</td>
     <td>${number(row.clones)}</td>
     <td>${number(row.uniqueCloners)}</td>
+    <td>${number(row.recordedViews)}</td>
+    <td>${number(row.recordedClones)}</td>
     <td>${number(row.releasePackageDownloads)}</td>
     <td><a href="${snapshotUrl(row.path)}" target="_blank" rel="noreferrer">JSON ↗</a></td>
   </tr>`).join('');
@@ -91,10 +95,12 @@ function csvCell(value) {
 }
 
 function downloadCsv() {
-  const header = ['captured_at_utc', 'repository', 'views_14d', 'unique_visitors_14d', 'clones_14d', 'unique_cloners_14d', 'named_zip_downloads', 'stars', 'forks', 'source_file', 'sha256'];
+  const header = ['captured_at_utc', 'repository', 'views_14d', 'unique_visitors_14d', 'clones_14d', 'unique_cloners_14d', 'recorded_views_total', 'recorded_views_from', 'recorded_views_through', 'recorded_clones_total', 'recorded_clones_from', 'recorded_clones_through', 'named_zip_downloads', 'stars', 'forks', 'source_file', 'sha256'];
   const body = loadedRows.map(row => [
     row.capturedAt, row.repository, row.views, row.uniqueVisitors, row.clones,
-    row.uniqueCloners, row.releasePackageDownloads, row.stars, row.forks,
+    row.uniqueCloners, row.recordedViews, row.recordedViewsFrom, row.recordedViewsThrough,
+    row.recordedClones, row.recordedClonesFrom, row.recordedClonesThrough,
+    row.releasePackageDownloads, row.stars, row.forks,
     snapshotUrl(row.path), row.sha256,
   ]);
   const csv = [header, ...body].map(row => row.map(csvCell).join(',')).join('\n');
@@ -114,13 +120,20 @@ async function initialise() {
       fetchJson('./data/index.json'),
     ]);
     const latestEntry = index.snapshots[0];
+    const recordedByRepository = new Map(latestEntry.repositories.map(repository => [repository.repository, repository]));
     repoGrid.innerHTML = latest.repositories
-      .map((repository, position) => renderCard(repository, latest.capturedAt, latestEntry.path, position))
+      .map((repository, position) => renderCard(
+        repository,
+        recordedByRepository.get(repository.repository),
+        latest.capturedAt,
+        latestEntry.path,
+        position,
+      ))
       .join('');
     renderHistory(index);
     lastUpdated.textContent = `Newest record: ${dateTime(latest.capturedAt)}`;
     status.className = 'status is-ready';
-    status.textContent = `${latest.repositories.length} public repositories loaded from the preserved GitHub evidence.`;
+    status.textContent = `${latest.repositories.length} public repositories loaded · recorded totals retain each UTC day once.`;
     footerStatus.textContent = `${index.snapshots.length} account-wide snapshots preserved.`;
     downloadButton.disabled = false;
     downloadButton.addEventListener('click', downloadCsv);
@@ -129,7 +142,7 @@ async function initialise() {
     status.className = 'status is-error';
     status.textContent = 'The evidence files could not be loaded just now. The public GitHub history remains intact.';
     lastUpdated.textContent = 'Evidence connection unavailable';
-    historyBody.innerHTML = `<tr><td colspan="8"><a href="https://github.com/${OWNER}/${EVIDENCE_REPOSITORY}/tree/main/docs/data">Open the public evidence directly on GitHub.</a></td></tr>`;
+    historyBody.innerHTML = `<tr><td colspan="10"><a href="https://github.com/${OWNER}/${EVIDENCE_REPOSITORY}/tree/main/docs/data">Open the public evidence directly on GitHub.</a></td></tr>`;
   }
 }
 

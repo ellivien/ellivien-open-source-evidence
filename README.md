@@ -28,6 +28,13 @@ GitHub Actions runs every Sunday at 08:17 UTC. Each run preserves:
 The workflow also supports a manual run, but ordinary weekly collection needs
 no user action and does not require a Mac to be awake.
 
+The public index merges the daily traffic arrays from every preserved snapshot
+by repository and UTC timestamp. Overlapping Sundays therefore replace the
+same date instead of adding it twice, producing growing recorded-view and
+recorded-clone totals from the first captured coverage period onward. GitHub
+does not expose identities that could support an all-time unique-person count,
+so unique visitors and cloning clients remain honestly labelled 14-day values.
+
 ## One-time secret
 
 GitHub's traffic endpoints require repository **Administration: Read-only**.

@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildEvidenceIndex } from './recorded-history.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const API_BASE = 'https://api.github.com';
@@ -118,19 +119,6 @@ async function collectInBatches(repositories, size = 5) {
   return collected;
 }
 
-function publicSummary(repository) {
-  return {
-    repository: repository.repository,
-    views: repository.traffic.views.count,
-    uniqueVisitors: repository.traffic.views.uniques,
-    clones: repository.traffic.clones.count,
-    uniqueCloners: repository.traffic.clones.uniques,
-    releasePackageDownloads: repository.releasePackageDownloadTotal,
-    stars: repository.repositoryTotals.stars,
-    forks: repository.repositoryTotals.forks,
-  };
-}
-
 const repositories = await discoverPublicRepositories();
 const capturedAt = new Date().toISOString();
 const evidence = await collectInBatches(repositories);
@@ -166,19 +154,26 @@ writeFileSync(snapshotPath, serialised, { flag: 'wx' });
 writeFileSync(`${snapshotPath}.sha256`, `${digest}  ${stamp}.json\n`, { flag: 'wx' });
 writeFileSync(latestPath, serialised);
 
-let index = { schemaVersion: 1, account: owner, snapshots: [] };
+let index = { schemaVersion: 2, account: owner, snapshots: [] };
 try {
   index = JSON.parse(readFileSync(indexPath, 'utf8'));
 } catch (error) {
   if (error.code !== 'ENOENT') throw error;
 }
-index.snapshots = [{
-  capturedAt,
-  path: relativeSnapshotPath,
-  sha256: digest,
-  repositoryCount: evidence.length,
-  repositories: evidence.map(publicSummary),
-}, ...index.snapshots.filter(entry => entry.path !== relativeSnapshotPath)];
+const preservedSnapshots = index.snapshots
+  .filter(entry => entry.path !== relativeSnapshotPath)
+  .map(entry => ({
+    path: entry.path,
+    sha256: entry.sha256,
+    snapshot: JSON.parse(readFileSync(join(ROOT, 'docs', entry.path), 'utf8')),
+  }));
+index = buildEvidenceIndex({
+  account: owner,
+  snapshots: [
+    ...preservedSnapshots,
+    { path: relativeSnapshotPath, sha256: digest, snapshot },
+  ],
+});
 writeFileSync(indexPath, `${JSON.stringify(index, null, 2)}\n`);
 
-console.log(JSON.stringify({ capturedAt, repositories: evidence.map(publicSummary), snapshot: relativeSnapshotPath, sha256: digest }, null, 2));
+console.log(JSON.stringify({ capturedAt, repositories: index.snapshots[0].repositories, snapshot: relativeSnapshotPath, sha256: digest }, null, 2));
