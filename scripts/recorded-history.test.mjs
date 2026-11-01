@@ -80,3 +80,24 @@ test('a future repository begins its own recorded history automatically', () => 
   assert.equal(index.snapshots[0].repositories[0].recordedViews, 7);
   assert.equal(index.snapshots[0].repositories[0].recordedClones, 3);
 });
+
+test('zero-filled API padding does not move the truthful start date backwards', () => {
+  const index = buildEvidenceIndex({
+    account: 'ellivien',
+    snapshots: [{
+      path: 'padding.json', sha256: 'padding',
+      snapshot: {
+        capturedAt: '2026-11-01T08:17:00Z',
+        repositories: [repository('new-project', {
+          views: [day('2026-10-18', 0), day('2026-10-31', 4)],
+          clones: [day('2026-10-18', 0), day('2026-10-31', 2)],
+        })],
+      },
+    }],
+  });
+
+  const summary = index.snapshots[0].repositories[0];
+  assert.equal(summary.recordedTrafficFrom, '2026-10-31T00:00:00Z');
+  assert.equal(summary.recordedViewsFrom, '2026-10-31T00:00:00Z');
+  assert.equal(summary.recordedClonesFrom, '2026-10-31T00:00:00Z');
+});

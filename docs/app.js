@@ -43,7 +43,7 @@ function snapshotUrl(path) {
 function renderCard(repository, recorded, capturedAt, snapshotPath, index) {
   const views = repository.traffic?.views || {};
   const clones = repository.traffic?.clones || {};
-  const recordedFrom = recorded?.recordedViewsFrom || recorded?.recordedClonesFrom;
+  const recordedFrom = recorded?.recordedTrafficFrom || recorded?.recordedViewsFrom || recorded?.recordedClonesFrom;
   const recordedSince = recordedFrom ? `since ${shortDate(recordedFrom)}` : 'since tracking began';
   return `
     <article class="repo-card" style="--accent: ${ACCENTS[index % ACCENTS.length]}">

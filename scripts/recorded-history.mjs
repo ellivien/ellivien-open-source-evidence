@@ -24,8 +24,11 @@ function total(target) {
   return [...target.values()].reduce((sum, record) => sum + record.count, 0);
 }
 
-function firstDate(target) {
-  return [...target.keys()].sort()[0] || null;
+function firstRecordedDate(target) {
+  return [...target.entries()]
+    .filter(([, record]) => record.count > 0)
+    .map(([timestamp]) => timestamp)
+    .sort()[0] || null;
 }
 
 function lastDate(target) {
@@ -33,6 +36,8 @@ function lastDate(target) {
 }
 
 function publicSummary(repository, state) {
+  const recordedViewsFrom = firstRecordedDate(state.views);
+  const recordedClonesFrom = firstRecordedDate(state.clones);
   return {
     repository: repository.repository,
     views: count(repository.traffic?.views?.count),
@@ -40,11 +45,12 @@ function publicSummary(repository, state) {
     clones: count(repository.traffic?.clones?.count),
     uniqueCloners: count(repository.traffic?.clones?.uniques),
     recordedViews: total(state.views),
-    recordedViewsFrom: firstDate(state.views),
+    recordedViewsFrom,
     recordedViewsThrough: lastDate(state.views),
     recordedClones: total(state.clones),
-    recordedClonesFrom: firstDate(state.clones),
+    recordedClonesFrom,
     recordedClonesThrough: lastDate(state.clones),
+    recordedTrafficFrom: [recordedViewsFrom, recordedClonesFrom].filter(Boolean).sort()[0] || null,
     releasePackageDownloads: count(repository.releasePackageDownloadTotal),
     stars: count(repository.repositoryTotals?.stars),
     forks: count(repository.repositoryTotals?.forks),
@@ -80,6 +86,7 @@ export function buildEvidenceIndex({ account, snapshots }) {
     account,
     derivation: {
       recordedTraffic: 'Daily GitHub traffic records are merged by repository and UTC timestamp; overlapping days use the newest preserved report and are counted once.',
+      recordedStart: 'The displayed start date is the first day with a non-zero preserved view or clone, not earlier zero-filled API padding.',
       uniqueBoundary: 'Unique visitors and cloning clients remain rolling 14-day figures because GitHub does not expose identities that could be deduplicated across weeks.',
     },
     snapshots: entries.reverse(),
