@@ -56,9 +56,9 @@ function renderCard(repository, recorded, capturedAt, snapshotPath, index) {
       </div>
       <div class="metrics">
         ${metric(`recorded views · ${recordedSince}`, recorded?.recordedViews ?? views.count)}
-        ${metric('unique visitors · latest 14 days', views.uniques)}
+        ${metric(`visitor-days · ${recordedSince}`, recorded?.recordedVisitorDays ?? views.uniques)}
         ${metric(`recorded full clones · ${recordedSince}`, recorded?.recordedClones ?? clones.count)}
-        ${metric('unique cloning clients · latest 14 days', clones.uniques)}
+        ${metric(`cloner-days · ${recordedSince}`, recorded?.recordedClonerDays ?? clones.uniques)}
         ${metric('named release ZIP downloads · cumulative', repository.releasePackageDownloadTotal, true)}
       </div>
       <div class="repo-card__foot">
@@ -80,11 +80,11 @@ function renderHistory(index) {
     <td>${shortDate(row.capturedAt)}</td>
     <td>${row.repository.replace(`${OWNER}/ellivien-`, '').replaceAll('-', ' ')}</td>
     <td>${number(row.views)}</td>
-    <td>${number(row.uniqueVisitors)}</td>
     <td>${number(row.clones)}</td>
-    <td>${number(row.uniqueCloners)}</td>
     <td>${number(row.recordedViews)}</td>
+    <td>${number(row.recordedVisitorDays)}</td>
     <td>${number(row.recordedClones)}</td>
+    <td>${number(row.recordedClonerDays)}</td>
     <td>${number(row.releasePackageDownloads)}</td>
     <td><a href="${snapshotUrl(row.path)}" target="_blank" rel="noreferrer">JSON ↗</a></td>
   </tr>`).join('');
@@ -95,11 +95,11 @@ function csvCell(value) {
 }
 
 function downloadCsv() {
-  const header = ['captured_at_utc', 'repository', 'views_14d', 'unique_visitors_14d', 'clones_14d', 'unique_cloners_14d', 'recorded_views_total', 'recorded_views_from', 'recorded_views_through', 'recorded_clones_total', 'recorded_clones_from', 'recorded_clones_through', 'named_zip_downloads', 'stars', 'forks', 'source_file', 'sha256'];
+  const header = ['captured_at_utc', 'repository', 'views_14d', 'unique_visitors_14d', 'clones_14d', 'unique_cloners_14d', 'recorded_views_total', 'recorded_visitor_days', 'recorded_views_from', 'recorded_views_through', 'recorded_clones_total', 'recorded_cloner_days', 'recorded_clones_from', 'recorded_clones_through', 'named_zip_downloads', 'stars', 'forks', 'source_file', 'sha256'];
   const body = loadedRows.map(row => [
     row.capturedAt, row.repository, row.views, row.uniqueVisitors, row.clones,
-    row.uniqueCloners, row.recordedViews, row.recordedViewsFrom, row.recordedViewsThrough,
-    row.recordedClones, row.recordedClonesFrom, row.recordedClonesThrough,
+    row.uniqueCloners, row.recordedViews, row.recordedVisitorDays, row.recordedViewsFrom, row.recordedViewsThrough,
+    row.recordedClones, row.recordedClonerDays, row.recordedClonesFrom, row.recordedClonesThrough,
     row.releasePackageDownloads, row.stars, row.forks,
     snapshotUrl(row.path), row.sha256,
   ]);

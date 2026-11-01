@@ -56,6 +56,8 @@ test('overlapping GitHub days are counted once using the newest report', () => {
 
   assert.equal(index.snapshots[0].repositories[0].recordedViews, 11);
   assert.equal(index.snapshots[0].repositories[0].recordedClones, 6);
+  assert.equal(index.snapshots[0].repositories[0].recordedVisitorDays, 3);
+  assert.equal(index.snapshots[0].repositories[0].recordedClonerDays, 3);
   assert.equal(index.snapshots[0].repositories[0].recordedViewsFrom, '2026-10-31T00:00:00Z');
   assert.equal(index.snapshots[0].repositories[0].recordedViewsThrough, '2026-11-02T00:00:00Z');
   assert.equal(index.snapshots[1].repositories[0].recordedViews, 5);
@@ -79,6 +81,8 @@ test('a future repository begins its own recorded history automatically', () => 
   assert.equal(index.snapshots[0].repositories[0].repository, 'ellivien/future-repository');
   assert.equal(index.snapshots[0].repositories[0].recordedViews, 7);
   assert.equal(index.snapshots[0].repositories[0].recordedClones, 3);
+  assert.equal(index.snapshots[0].repositories[0].recordedVisitorDays, 1);
+  assert.equal(index.snapshots[0].repositories[0].recordedClonerDays, 1);
 });
 
 test('zero-filled API padding does not move the truthful start date backwards', () => {

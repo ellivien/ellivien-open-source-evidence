@@ -24,6 +24,10 @@ function total(target) {
   return [...target.values()].reduce((sum, record) => sum + record.count, 0);
 }
 
+function uniqueDayTotal(target) {
+  return [...target.values()].reduce((sum, record) => sum + record.uniques, 0);
+}
+
 function firstRecordedDate(target) {
   return [...target.entries()]
     .filter(([, record]) => record.count > 0)
@@ -45,9 +49,11 @@ function publicSummary(repository, state) {
     clones: count(repository.traffic?.clones?.count),
     uniqueCloners: count(repository.traffic?.clones?.uniques),
     recordedViews: total(state.views),
+    recordedVisitorDays: uniqueDayTotal(state.views),
     recordedViewsFrom,
     recordedViewsThrough: lastDate(state.views),
     recordedClones: total(state.clones),
+    recordedClonerDays: uniqueDayTotal(state.clones),
     recordedClonesFrom,
     recordedClonesThrough: lastDate(state.clones),
     recordedTrafficFrom: [recordedViewsFrom, recordedClonesFrom].filter(Boolean).sort()[0] || null,
@@ -87,6 +93,7 @@ export function buildEvidenceIndex({ account, snapshots }) {
     derivation: {
       recordedTraffic: 'Daily GitHub traffic records are merged by repository and UTC timestamp; overlapping days use the newest preserved report and are counted once.',
       recordedStart: 'The displayed start date is the first day with a non-zero preserved view or clone, not earlier zero-filled API padding.',
+      dailyUniqueTotals: 'Visitor-days and cloner-days sum GitHub daily unique counts. A returning client on a different UTC day contributes once to each day and is not claimed as a new lifetime-unique person.',
       uniqueBoundary: 'Unique visitors and cloning clients remain rolling 14-day figures because GitHub does not expose identities that could be deduplicated across weeks.',
     },
     snapshots: entries.reverse(),

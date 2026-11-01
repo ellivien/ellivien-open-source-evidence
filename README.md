@@ -37,7 +37,11 @@ same date instead of adding it twice, producing growing recorded-view and
 recorded-clone totals from the first day with genuine recorded activity onward.
 Earlier zero-filled API padding is not presented as part of the evidence period. GitHub
 does not expose identities that could support an all-time unique-person count,
-so unique visitors and cloning clients remain honestly labelled 14-day values.
+so the cumulative companion measures are explicitly labelled **visitor-days**
+and **cloner-days**. A returning client contributes once to every UTC day on
+which it appears; this demonstrates repeated engagement without pretending to
+identify lifetime-unique people. The raw snapshots and CSV still retain
+GitHub's original rolling 14-day unique fields for auditability.
 
 ## One-time secret
 
