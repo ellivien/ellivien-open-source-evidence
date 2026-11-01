@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ellivien's preserved open-source GitHub evidence dashboard.">
+    <title>Ellivien Open-Source Evidence</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#evidence">Skip to evidence</a>
+    <header class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="shell hero__inner">
+        <p class="eyebrow"><span aria-hidden="true">✦</span> Ellivien evidence room</p>
+        <h1>Open-source interest,<br><span>preserved over time.</span></h1>
+        <p class="intro">A readable window onto GitHub's timestamped traffic, clone and release-download records for every current and future Ellivien public repository.</p>
+        <div class="automation" aria-label="Collection schedule">
+          <span class="automation__pulse" aria-hidden="true"></span>
+          <div>
+            <strong>Automatic every Sunday</strong>
+            <span>08:17 UTC · no weekly action required</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="evidence" class="shell">
+      <section class="summary" aria-labelledby="latest-heading">
+        <div>
+          <p class="section-kicker">Latest preserved snapshot</p>
+          <h2 id="latest-heading">What GitHub recorded</h2>
+        </div>
+        <div class="summary__actions">
+          <p id="last-updated" class="last-updated" aria-live="polite">Loading evidence…</p>
+          <button id="download-csv" class="button" type="button" disabled>Download evidence CSV</button>
+        </div>
+      </section>
+
+      <div id="status" class="status" role="status" aria-live="polite">
+        <span class="spinner" aria-hidden="true"></span>
+        Reading the account-wide public evidence from GitHub…
+      </div>
+
+      <section id="repo-grid" class="repo-grid" aria-label="Repository evidence"></section>
+
+      <section class="history" aria-labelledby="history-heading">
+        <div class="history__heading">
+          <div>
+            <p class="section-kicker">Dated record</p>
+            <h2 id="history-heading">Recent snapshot history</h2>
+          </div>
+          <p>Each row links to the exact public JSON file committed on GitHub.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Captured</th>
+                <th scope="col">Project</th>
+                <th scope="col">Views</th>
+                <th scope="col">Visitors</th>
+                <th scope="col">Clones</th>
+                <th scope="col">Cloners</th>
+                <th scope="col">ZIP downloads</th>
+                <th scope="col">Evidence</th>
+              </tr>
+            </thead>
+            <tbody id="history-body">
+              <tr><td colspan="8">Loading preserved history…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="notes" aria-labelledby="notes-heading">
+        <div>
+          <p class="section-kicker">Read this honestly</p>
+          <h2 id="notes-heading">What the figures establish</h2>
+        </div>
+        <div class="notes__grid">
+          <article>
+            <h3>Platform-recorded evidence</h3>
+            <p>The source files contain aggregate figures returned by GitHub's API and preserved in public commit history. This page only displays them.</p>
+          </article>
+          <article>
+            <h3>Rolling traffic window</h3>
+            <p>Views, visitors and clones describe the 14 days before each snapshot. Weekly overlap prevents the history from disappearing.</p>
+          </article>
+          <article>
+            <h3>Careful interpretation</h3>
+            <p>Unique clients are not guaranteed to be unique humans, and automated clients can contribute. Named release ZIP counts are cumulative.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell">
+        <span>Ellivien · Evidence without surveillance</span>
+        <span id="footer-status">Public source files and public viewer.</span>
+      </div>
+    </footer>
+  </body>
+</html>
