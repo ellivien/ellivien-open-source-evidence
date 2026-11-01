@@ -13,6 +13,9 @@ scheduled commits do not manufacture interest in the measured projects.
 The readable dashboard is published from `docs/` by the dedicated
 `publish-dashboard.yml` GitHub Pages workflow. Publishing uses one concurrency
 lane so an overlapping older deployment cannot block a newer evidence update.
+It listens for successful completion of the evidence collector because GitHub
+intentionally prevents a workflow-token commit from directly triggering a
+second workflow.
 The raw, timestamped JSON remains the authoritative evidence.
 
 ## Automatic schedule
