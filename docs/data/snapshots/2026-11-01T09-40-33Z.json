@@ -1,0 +1,673 @@
+{
+  "schemaVersion": 2,
+  "capturedAt": "2026-11-01T09:40:33.787Z",
+  "account": "ellivien",
+  "source": {
+    "provider": "GitHub REST API",
+    "aggregateOnly": true,
+    "trafficWindowDays": 14,
+    "repositoryDiscovery": "All owner repositories are listed, then private repositories and the evidence repository are discarded before collection.",
+    "note": "Counts may include automated clients and do not identify people."
+  },
+  "discovery": {
+    "publicRepositoriesTracked": 3,
+    "maximumRepositories": 50,
+    "excludedRepositories": [
+      "ellivien/ellivien-open-source-evidence"
+    ]
+  },
+  "repositories": [
+    {
+      "repository": "ellivien/ellivien-memfrags",
+      "name": "ellivien-memfrags",
+      "description": "Provider-neutral, trigger-based memory fragments for AI companion portals, with an accessible install-with-your-coding-AI route.",
+      "url": "https://github.com/ellivien/ellivien-memfrags",
+      "createdAt": "2026-10-26T19:48:45Z",
+      "updatedAt": "2026-11-01T09:54:42Z",
+      "pushedAt": "2026-11-01T09:40:26Z",
+      "archived": false,
+      "fork": false,
+      "repositoryTotals": {
+        "stars": 0,
+        "forks": 0,
+        "openIssuesAndPullRequests": 0
+      },
+      "traffic": {
+        "views": {
+          "count": 4,
+          "uniques": 3,
+          "views": [
+            {
+              "timestamp": "2026-10-18T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-19T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-20T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-21T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-22T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-23T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-24T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-25T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-26T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-27T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-28T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-29T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-30T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-31T00:00:00Z",
+              "count": 4,
+              "uniques": 3
+            }
+          ]
+        },
+        "clones": {
+          "count": 16,
+          "uniques": 12,
+          "clones": [
+            {
+              "timestamp": "2026-10-18T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-19T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-20T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-21T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-22T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-23T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-24T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-25T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-26T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-27T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-28T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-29T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-30T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-31T00:00:00Z",
+              "count": 16,
+              "uniques": 12
+            }
+          ]
+        },
+        "topReferrers": [
+          {
+            "referrer": "github.com",
+            "count": 1,
+            "uniques": 1
+          }
+        ],
+        "popularPaths": [
+          {
+            "path": "/ellivien/ellivien-memfrags",
+            "title": "Overview",
+            "count": 4,
+            "uniques": 3
+          }
+        ]
+      },
+      "releases": [
+        {
+          "tagName": "v0.2.1",
+          "name": "Ellivien MemFrags v0.2.1",
+          "draft": false,
+          "prerelease": false,
+          "publishedAt": "2026-10-31T07:26:13Z",
+          "url": "https://github.com/ellivien/ellivien-memfrags/releases/tag/v0.2.1",
+          "assets": [
+            {
+              "name": "ellivien-memfrags-v0.2.1.zip",
+              "size": 45846,
+              "contentType": "application/zip",
+              "downloadCount": 0,
+              "updatedAt": "2026-10-31T07:26:13Z",
+              "downloadUrl": "https://github.com/ellivien/ellivien-memfrags/releases/download/v0.2.1/ellivien-memfrags-v0.2.1.zip"
+            },
+            {
+              "name": "ellivien-memfrags-v0.2.1.zip.sha256",
+              "size": 95,
+              "contentType": "application/octet-stream",
+              "downloadCount": 0,
+              "updatedAt": "2026-10-31T07:26:13Z",
+              "downloadUrl": "https://github.com/ellivien/ellivien-memfrags/releases/download/v0.2.1/ellivien-memfrags-v0.2.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "releasesCappedAtFirst100": false,
+      "releaseAssetDownloadTotal": 0,
+      "releasePackageDownloadTotal": 0
+    },
+    {
+      "repository": "ellivien/ellivien-pulsetap",
+      "name": "ellivien-pulsetap",
+      "description": "A self-supported reference implementation for companion-initiated notifications",
+      "url": "https://github.com/ellivien/ellivien-pulsetap",
+      "createdAt": "2026-10-26T16:38:50Z",
+      "updatedAt": "2026-11-01T09:54:43Z",
+      "pushedAt": "2026-11-01T09:40:31Z",
+      "archived": false,
+      "fork": false,
+      "repositoryTotals": {
+        "stars": 0,
+        "forks": 0,
+        "openIssuesAndPullRequests": 0
+      },
+      "traffic": {
+        "views": {
+          "count": 6,
+          "uniques": 4,
+          "views": [
+            {
+              "timestamp": "2026-10-18T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-19T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-20T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-21T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-22T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-23T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-24T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-25T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-26T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-27T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-28T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-29T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-30T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-31T00:00:00Z",
+              "count": 6,
+              "uniques": 4
+            }
+          ]
+        },
+        "clones": {
+          "count": 5,
+          "uniques": 5,
+          "clones": [
+            {
+              "timestamp": "2026-10-18T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-19T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-20T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-21T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-22T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-23T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-24T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-25T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-26T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-27T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-28T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-29T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-30T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-31T00:00:00Z",
+              "count": 5,
+              "uniques": 5
+            }
+          ]
+        },
+        "topReferrers": [],
+        "popularPaths": [
+          {
+            "path": "/ellivien/ellivien-pulsetap",
+            "title": "Overview",
+            "count": 6,
+            "uniques": 4
+          }
+        ]
+      },
+      "releases": [
+        {
+          "tagName": "v0.1.0",
+          "name": "Ellivien PulseTap v0.1.0",
+          "draft": false,
+          "prerelease": false,
+          "publishedAt": "2026-10-31T07:26:10Z",
+          "url": "https://github.com/ellivien/ellivien-pulsetap/releases/tag/v0.1.0",
+          "assets": [
+            {
+              "name": "ellivien-pulsetap-v0.1.0.zip",
+              "size": 1742700,
+              "contentType": "application/zip",
+              "downloadCount": 1,
+              "updatedAt": "2026-10-31T07:26:10Z",
+              "downloadUrl": "https://github.com/ellivien/ellivien-pulsetap/releases/download/v0.1.0/ellivien-pulsetap-v0.1.0.zip"
+            },
+            {
+              "name": "ellivien-pulsetap-v0.1.0.zip.sha256",
+              "size": 95,
+              "contentType": "application/octet-stream",
+              "downloadCount": 1,
+              "updatedAt": "2026-10-31T07:26:09Z",
+              "downloadUrl": "https://github.com/ellivien/ellivien-pulsetap/releases/download/v0.1.0/ellivien-pulsetap-v0.1.0.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "releasesCappedAtFirst100": false,
+      "releaseAssetDownloadTotal": 2,
+      "releasePackageDownloadTotal": 1
+    },
+    {
+      "repository": "ellivien/ellivien-three-tier-context",
+      "name": "ellivien-three-tier-context",
+      "description": "Provider-neutral three-tier thread recall and rolling summaries for companion portals",
+      "url": "https://github.com/ellivien/ellivien-three-tier-context",
+      "createdAt": "2026-10-26T16:38:49Z",
+      "updatedAt": "2026-11-01T09:54:44Z",
+      "pushedAt": "2026-11-01T09:40:30Z",
+      "archived": false,
+      "fork": false,
+      "repositoryTotals": {
+        "stars": 0,
+        "forks": 0,
+        "openIssuesAndPullRequests": 0
+      },
+      "traffic": {
+        "views": {
+          "count": 18,
+          "uniques": 12,
+          "views": [
+            {
+              "timestamp": "2026-10-18T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-19T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-20T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-21T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-22T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-23T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-24T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-25T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-26T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-27T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-28T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-29T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-30T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-31T00:00:00Z",
+              "count": 18,
+              "uniques": 12
+            }
+          ]
+        },
+        "clones": {
+          "count": 19,
+          "uniques": 15,
+          "clones": [
+            {
+              "timestamp": "2026-10-18T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-19T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-20T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-21T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-22T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-23T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-24T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-25T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-26T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-27T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-28T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-29T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-30T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-31T00:00:00Z",
+              "count": 19,
+              "uniques": 15
+            }
+          ]
+        },
+        "topReferrers": [
+          {
+            "referrer": "github.com",
+            "count": 6,
+            "uniques": 2
+          },
+          {
+            "referrer": "com.reddit.frontpage",
+            "count": 1,
+            "uniques": 1
+          },
+          {
+            "referrer": "reddit.com",
+            "count": 1,
+            "uniques": 1
+          }
+        ],
+        "popularPaths": [
+          {
+            "path": "/ellivien/ellivien-three-tier-context",
+            "title": "Overview",
+            "count": 18,
+            "uniques": 12
+          }
+        ]
+      },
+      "releases": [
+        {
+          "tagName": "v0.1.0",
+          "name": "Ellivien Three-Tier Context v0.1.0",
+          "draft": false,
+          "prerelease": false,
+          "publishedAt": "2026-10-31T07:26:07Z",
+          "url": "https://github.com/ellivien/ellivien-three-tier-context/releases/tag/v0.1.0",
+          "assets": [
+            {
+              "name": "ellivien-three-tier-context-v0.1.0.zip",
+              "size": 24651,
+              "contentType": "application/zip",
+              "downloadCount": 2,
+              "updatedAt": "2026-10-31T07:26:06Z",
+              "downloadUrl": "https://github.com/ellivien/ellivien-three-tier-context/releases/download/v0.1.0/ellivien-three-tier-context-v0.1.0.zip"
+            },
+            {
+              "name": "ellivien-three-tier-context-v0.1.0.zip.sha256",
+              "size": 105,
+              "contentType": "application/octet-stream",
+              "downloadCount": 2,
+              "updatedAt": "2026-10-31T07:26:06Z",
+              "downloadUrl": "https://github.com/ellivien/ellivien-three-tier-context/releases/download/v0.1.0/ellivien-three-tier-context-v0.1.0.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "releasesCappedAtFirst100": false,
+      "releaseAssetDownloadTotal": 4,
+      "releasePackageDownloadTotal": 2
+    }
+  ]
+}
