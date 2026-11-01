@@ -10,8 +10,10 @@ scheduled commits do not manufacture interest in the measured projects.
 
 ## Public dashboard
 
-The readable dashboard is published with GitHub Pages from `docs/`. The raw,
-timestamped JSON remains the authoritative evidence.
+The readable dashboard is published from `docs/` by the dedicated
+`publish-dashboard.yml` GitHub Pages workflow. Publishing uses one concurrency
+lane so an overlapping older deployment cannot block a newer evidence update.
+The raw, timestamped JSON remains the authoritative evidence.
 
 ## Automatic schedule
 
