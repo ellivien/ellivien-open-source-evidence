@@ -7,6 +7,62 @@
   },
   "snapshots": [
     {
+      "capturedAt": "2026-11-01T09:36:35.356Z",
+      "path": "data/snapshots/2026-11-01T09-36-35Z.json",
+      "sha256": "32273b76af5006666bd9c2f10007e82ffe05823ae4889fea873f098736179413",
+      "repositoryCount": 3,
+      "repositories": [
+        {
+          "repository": "ellivien/ellivien-memfrags",
+          "views": 4,
+          "uniqueVisitors": 3,
+          "clones": 16,
+          "uniqueCloners": 12,
+          "recordedViews": 4,
+          "recordedViewsFrom": "2026-10-18T00:00:00Z",
+          "recordedViewsThrough": "2026-10-31T00:00:00Z",
+          "recordedClones": 16,
+          "recordedClonesFrom": "2026-10-18T00:00:00Z",
+          "recordedClonesThrough": "2026-10-31T00:00:00Z",
+          "releasePackageDownloads": 0,
+          "stars": 0,
+          "forks": 0
+        },
+        {
+          "repository": "ellivien/ellivien-pulsetap",
+          "views": 6,
+          "uniqueVisitors": 4,
+          "clones": 5,
+          "uniqueCloners": 5,
+          "recordedViews": 6,
+          "recordedViewsFrom": "2026-10-18T00:00:00Z",
+          "recordedViewsThrough": "2026-10-31T00:00:00Z",
+          "recordedClones": 5,
+          "recordedClonesFrom": "2026-10-18T00:00:00Z",
+          "recordedClonesThrough": "2026-10-31T00:00:00Z",
+          "releasePackageDownloads": 1,
+          "stars": 0,
+          "forks": 0
+        },
+        {
+          "repository": "ellivien/ellivien-three-tier-context",
+          "views": 18,
+          "uniqueVisitors": 12,
+          "clones": 19,
+          "uniqueCloners": 15,
+          "recordedViews": 18,
+          "recordedViewsFrom": "2026-10-18T00:00:00Z",
+          "recordedViewsThrough": "2026-10-31T00:00:00Z",
+          "recordedClones": 19,
+          "recordedClonesFrom": "2026-10-18T00:00:00Z",
+          "recordedClonesThrough": "2026-10-31T00:00:00Z",
+          "releasePackageDownloads": 2,
+          "stars": 0,
+          "forks": 0
+        }
+      ]
+    },
+    {
       "capturedAt": "2026-11-01T09:35:50.560Z",
       "path": "data/snapshots/2026-11-01T09-35-50Z.json",
       "sha256": "a67eeb897774a152dc70877cb0942e1864f2d1a73374485b2b1fdaa282a8c848",
