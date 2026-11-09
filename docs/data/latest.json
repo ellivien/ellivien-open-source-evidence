@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "capturedAt": "2026-11-09T08:24:49.303Z",
+  "capturedAt": "2026-11-09T08:31:04.588Z",
   "account": "ellivien",
   "source": {
     "provider": "GitHub REST API",
@@ -251,8 +251,8 @@
       "description": "Free configurable threaded companion portal for the native OpenAI Responses API.",
       "url": "https://github.com/ellivien/ellivien-openai-portal",
       "createdAt": "2026-11-09T08:17:45Z",
-      "updatedAt": "2026-11-09T08:18:07Z",
-      "pushedAt": "2026-11-09T08:18:09Z",
+      "updatedAt": "2026-11-09T08:28:59Z",
+      "pushedAt": "2026-11-09T08:28:56Z",
       "archived": false,
       "fork": false,
       "repositoryTotals": {
@@ -417,6 +417,32 @@
         "popularPaths": []
       },
       "releases": [
+        {
+          "tagName": "v0.1.1",
+          "name": "Ellivien OpenAI Companion Portal v0.1.1",
+          "draft": false,
+          "prerelease": false,
+          "publishedAt": "2026-11-09T08:29:09Z",
+          "url": "https://github.com/ellivien/ellivien-openai-portal/releases/tag/v0.1.1",
+          "assets": [
+            {
+              "name": "ellivien-openai-portal-v0.1.1.zip",
+              "size": 2233098,
+              "contentType": "application/zip",
+              "downloadCount": 0,
+              "updatedAt": "2026-11-09T08:29:08Z",
+              "downloadUrl": "https://github.com/ellivien/ellivien-openai-portal/releases/download/v0.1.1/ellivien-openai-portal-v0.1.1.zip"
+            },
+            {
+              "name": "ellivien-openai-portal-v0.1.1.zip.sha256",
+              "size": 100,
+              "contentType": "application/octet-stream",
+              "downloadCount": 0,
+              "updatedAt": "2026-11-09T08:29:08Z",
+              "downloadUrl": "https://github.com/ellivien/ellivien-openai-portal/releases/download/v0.1.1/ellivien-openai-portal-v0.1.1.zip.sha256"
+            }
+          ]
+        },
         {
           "tagName": "v0.1.0",
           "name": "Ellivien OpenAI Companion Portal v0.1.0",
