@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "capturedAt": "2026-11-08T15:19:14.098Z",
+  "capturedAt": "2026-11-09T08:24:49.303Z",
   "account": "ellivien",
   "source": {
     "provider": "GitHub REST API",
@@ -10,7 +10,7 @@
     "note": "Counts may include automated clients and do not identify people."
   },
   "discovery": {
-    "publicRepositoriesTracked": 3,
+    "publicRepositoriesTracked": 4,
     "maximumRepositories": 50,
     "excludedRepositories": [
       "ellivien/ellivien-open-source-evidence"
@@ -34,14 +34,9 @@
       },
       "traffic": {
         "views": {
-          "count": 16,
+          "count": 17,
           "uniques": 11,
           "views": [
-            {
-              "timestamp": "2026-10-25T00:00:00Z",
-              "count": 0,
-              "uniques": 0
-            },
             {
               "timestamp": "2026-10-26T00:00:00Z",
               "count": 0,
@@ -106,18 +101,18 @@
               "timestamp": "2026-11-07T00:00:00Z",
               "count": 1,
               "uniques": 1
+            },
+            {
+              "timestamp": "2026-11-08T00:00:00Z",
+              "count": 1,
+              "uniques": 1
             }
           ]
         },
         "clones": {
-          "count": 38,
-          "uniques": 27,
+          "count": 39,
+          "uniques": 28,
           "clones": [
-            {
-              "timestamp": "2026-10-25T00:00:00Z",
-              "count": 0,
-              "uniques": 0
-            },
             {
               "timestamp": "2026-10-26T00:00:00Z",
               "count": 0,
@@ -182,6 +177,11 @@
               "timestamp": "2026-11-07T00:00:00Z",
               "count": 0,
               "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-08T00:00:00Z",
+              "count": 1,
+              "uniques": 1
             }
           ]
         },
@@ -196,7 +196,7 @@
           {
             "path": "/ellivien/ellivien-memfrags",
             "title": "Overview",
-            "count": 13,
+            "count": 14,
             "uniques": 11
           },
           {
@@ -246,6 +246,209 @@
       "releasePackageDownloadTotal": 2
     },
     {
+      "repository": "ellivien/ellivien-openai-portal",
+      "name": "ellivien-openai-portal",
+      "description": "Free configurable threaded companion portal for the native OpenAI Responses API.",
+      "url": "https://github.com/ellivien/ellivien-openai-portal",
+      "createdAt": "2026-11-09T08:17:45Z",
+      "updatedAt": "2026-11-09T08:18:07Z",
+      "pushedAt": "2026-11-09T08:18:09Z",
+      "archived": false,
+      "fork": false,
+      "repositoryTotals": {
+        "stars": 0,
+        "forks": 0,
+        "openIssuesAndPullRequests": 0
+      },
+      "traffic": {
+        "views": {
+          "count": 0,
+          "uniques": 0,
+          "views": [
+            {
+              "timestamp": "2026-10-27T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-28T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-29T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-30T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-31T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-01T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-02T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-03T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-04T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-05T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-06T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-07T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-08T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-09T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            }
+          ]
+        },
+        "clones": {
+          "count": 0,
+          "uniques": 0,
+          "clones": [
+            {
+              "timestamp": "2026-10-27T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-28T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-29T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-30T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-10-31T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-01T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-02T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-03T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-04T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-05T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-06T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-07T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-08T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-09T00:00:00Z",
+              "count": 0,
+              "uniques": 0
+            }
+          ]
+        },
+        "topReferrers": [],
+        "popularPaths": []
+      },
+      "releases": [
+        {
+          "tagName": "v0.1.0",
+          "name": "Ellivien OpenAI Companion Portal v0.1.0",
+          "draft": false,
+          "prerelease": false,
+          "publishedAt": "2026-11-09T08:18:21Z",
+          "url": "https://github.com/ellivien/ellivien-openai-portal/releases/tag/v0.1.0",
+          "assets": [
+            {
+              "name": "ellivien-openai-portal-v0.1.0.zip",
+              "size": 2232498,
+              "contentType": "application/zip",
+              "downloadCount": 0,
+              "updatedAt": "2026-11-09T08:18:20Z",
+              "downloadUrl": "https://github.com/ellivien/ellivien-openai-portal/releases/download/v0.1.0/ellivien-openai-portal-v0.1.0.zip"
+            },
+            {
+              "name": "ellivien-openai-portal-v0.1.0.zip.sha256",
+              "size": 100,
+              "contentType": "application/octet-stream",
+              "downloadCount": 0,
+              "updatedAt": "2026-11-09T08:18:20Z",
+              "downloadUrl": "https://github.com/ellivien/ellivien-openai-portal/releases/download/v0.1.0/ellivien-openai-portal-v0.1.0.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "releasesCappedAtFirst100": false,
+      "releaseAssetDownloadTotal": 0,
+      "releasePackageDownloadTotal": 0
+    },
+    {
       "repository": "ellivien/ellivien-pulsetap",
       "name": "ellivien-pulsetap",
       "description": "A self-supported reference implementation for companion-initiated notifications",
@@ -265,11 +468,6 @@
           "count": 16,
           "uniques": 7,
           "views": [
-            {
-              "timestamp": "2026-10-25T00:00:00Z",
-              "count": 0,
-              "uniques": 0
-            },
             {
               "timestamp": "2026-10-26T00:00:00Z",
               "count": 0,
@@ -334,18 +532,18 @@
               "timestamp": "2026-11-07T00:00:00Z",
               "count": 0,
               "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-08T00:00:00Z",
+              "count": 0,
+              "uniques": 0
             }
           ]
         },
         "clones": {
-          "count": 35,
-          "uniques": 25,
+          "count": 36,
+          "uniques": 26,
           "clones": [
-            {
-              "timestamp": "2026-10-25T00:00:00Z",
-              "count": 0,
-              "uniques": 0
-            },
             {
               "timestamp": "2026-10-26T00:00:00Z",
               "count": 0,
@@ -410,6 +608,11 @@
               "timestamp": "2026-11-07T00:00:00Z",
               "count": 0,
               "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-08T00:00:00Z",
+              "count": 1,
+              "uniques": 1
             }
           ]
         },
@@ -500,11 +703,6 @@
           "uniques": 18,
           "views": [
             {
-              "timestamp": "2026-10-25T00:00:00Z",
-              "count": 0,
-              "uniques": 0
-            },
-            {
               "timestamp": "2026-10-26T00:00:00Z",
               "count": 0,
               "uniques": 0
@@ -568,18 +766,18 @@
               "timestamp": "2026-11-07T00:00:00Z",
               "count": 4,
               "uniques": 2
+            },
+            {
+              "timestamp": "2026-11-08T00:00:00Z",
+              "count": 0,
+              "uniques": 0
             }
           ]
         },
         "clones": {
-          "count": 61,
-          "uniques": 38,
+          "count": 62,
+          "uniques": 39,
           "clones": [
-            {
-              "timestamp": "2026-10-25T00:00:00Z",
-              "count": 0,
-              "uniques": 0
-            },
             {
               "timestamp": "2026-10-26T00:00:00Z",
               "count": 0,
@@ -644,6 +842,11 @@
               "timestamp": "2026-11-07T00:00:00Z",
               "count": 0,
               "uniques": 0
+            },
+            {
+              "timestamp": "2026-11-08T00:00:00Z",
+              "count": 1,
+              "uniques": 1
             }
           ]
         },
